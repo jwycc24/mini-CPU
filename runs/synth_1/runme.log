@@ -1,0 +1,808 @@
+
+*** Running vivado
+    with args -log cpu_tb.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source cpu_tb.tcl
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source cpu_tb.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1270.566 ; gain = 0.023 ; free physical = 1165 ; free virtual = 4507
+Command: read_checkpoint -auto_incremental -incremental /home/jin/lab5.srcs/utils_1/imports/synth_1/cpu_tb.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/jin/lab5.srcs/utils_1/imports/synth_1/cpu_tb.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top cpu_tb -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Vivado_Tcl 4-1810] synth_design options have changed between reference and incremental; A full resynthesis will be run
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 8623
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'CPU' [/home/jin/lab5.srcs/sources_1/new/CPU.v:127]
+INFO: [Synth 8-9937] previous definition of design element 'CPU' is here [/home/jin/lab5.srcs/sources_1/new/CPU.v:127]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'control_unit' [/home/jin/lab5.srcs/sources_1/new/CPU.v:362]
+INFO: [Synth 8-9937] previous definition of design element 'control_unit' is here [/home/jin/lab5.srcs/sources_1/new/CPU.v:362]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'mux_imm' [/home/jin/lab5.srcs/sources_1/new/CPU.v:382]
+INFO: [Synth 8-9937] previous definition of design element 'mux_imm' is here [/home/jin/lab5.srcs/sources_1/new/CPU.v:382]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'imm_extend' [/home/jin/lab5.srcs/sources_1/new/CPU.v:393]
+INFO: [Synth 8-9937] previous definition of design element 'imm_extend' is here [/home/jin/lab5.srcs/sources_1/new/CPU.v:393]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'ALU' [/home/jin/lab5.srcs/sources_1/new/CPU.v:452]
+INFO: [Synth 8-9937] previous definition of design element 'ALU' is here [/home/jin/lab5.srcs/sources_1/new/CPU.v:452]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'regfile' [/home/jin/lab5.srcs/sources_1/new/CPU.v:507]
+INFO: [Synth 8-9937] previous definition of design element 'regfile' is here [/home/jin/lab5.srcs/sources_1/new/CPU.v:507]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'mux_sa' [/home/jin/lab5.srcs/sources_1/new/CPU.v:528]
+INFO: [Synth 8-9937] previous definition of design element 'mux_sa' is here [/home/jin/lab5.srcs/sources_1/new/CPU.v:528]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'scdatamem' [/home/jin/lab5.srcs/sources_1/new/CPU.v:584]
+INFO: [Synth 8-9937] previous definition of design element 'scdatamem' is here [/home/jin/lab5.srcs/sources_1/new/CPU.v:584]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'data_mux' [/home/jin/lab5.srcs/sources_1/new/CPU.v:600]
+INFO: [Synth 8-9937] previous definition of design element 'data_mux' is here [/home/jin/lab5.srcs/sources_1/new/CPU.v:600]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'mux_rf' [/home/jin/lab5.srcs/sources_1/new/CPU.v:617]
+INFO: [Synth 8-9937] previous definition of design element 'mux_rf' is here [/home/jin/lab5.srcs/sources_1/new/CPU.v:617]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'pc_select' [/home/jin/lab5.srcs/sources_1/new/CPU.v:675]
+INFO: [Synth 8-9937] previous definition of design element 'pc_select' is here [/home/jin/lab5.srcs/sources_1/new/CPU.v:675]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'inst_mem' [/home/jin/lab5.srcs/sources_1/new/CPU.v:758]
+INFO: [Synth 8-9937] previous definition of design element 'inst_mem' is here [/home/jin/lab5.srcs/sources_1/new/CPU.v:758]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1946.641 ; gain = 373.738 ; free physical = 386 ; free virtual = 3729
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1356.248; parent = 1150.680; children = 205.568
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 2975.094; parent = 1946.645; children = 1028.449
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'cpu_tb' [/home/jin/lab5.srcs/sources_1/new/cpu_tb.v:24]
+INFO: [Synth 8-6157] synthesizing module 'CPU' [/home/jin/lab5.srcs/sources_1/new/CPU.v:23]
+INFO: [Synth 8-6157] synthesizing module 'pc_select' [/home/jin/lab5.srcs/sources_1/new/CPU.v:622]
+INFO: [Synth 8-6155] done synthesizing module 'pc_select' (0#1) [/home/jin/lab5.srcs/sources_1/new/CPU.v:622]
+INFO: [Synth 8-6157] synthesizing module 'inst_mem' [/home/jin/lab5.srcs/sources_1/new/CPU.v:678]
+INFO: [Synth 8-6155] done synthesizing module 'inst_mem' (0#1) [/home/jin/lab5.srcs/sources_1/new/CPU.v:678]
+INFO: [Synth 8-6157] synthesizing module 'control_unit' [/home/jin/lab5.srcs/sources_1/new/CPU.v:130]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/jin/lab5.srcs/sources_1/new/CPU.v:157]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/jin/lab5.srcs/sources_1/new/CPU.v:149]
+INFO: [Synth 8-6155] done synthesizing module 'control_unit' (0#1) [/home/jin/lab5.srcs/sources_1/new/CPU.v:130]
+INFO: [Synth 8-6157] synthesizing module 'mux_rf' [/home/jin/lab5.srcs/sources_1/new/CPU.v:602]
+INFO: [Synth 8-6155] done synthesizing module 'mux_rf' (0#1) [/home/jin/lab5.srcs/sources_1/new/CPU.v:602]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [/home/jin/lab5.srcs/sources_1/new/CPU.v:454]
+WARNING: [Synth 8-6896] index 0 out of range inside initial block, initial block items will be ignored [/home/jin/lab5.srcs/sources_1/new/CPU.v:490]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (0#1) [/home/jin/lab5.srcs/sources_1/new/CPU.v:454]
+INFO: [Synth 8-6157] synthesizing module 'mux_sa' [/home/jin/lab5.srcs/sources_1/new/CPU.v:511]
+INFO: [Synth 8-6155] done synthesizing module 'mux_sa' (0#1) [/home/jin/lab5.srcs/sources_1/new/CPU.v:511]
+INFO: [Synth 8-6157] synthesizing module 'mux_imm' [/home/jin/lab5.srcs/sources_1/new/CPU.v:364]
+INFO: [Synth 8-6155] done synthesizing module 'mux_imm' (0#1) [/home/jin/lab5.srcs/sources_1/new/CPU.v:364]
+INFO: [Synth 8-6157] synthesizing module 'imm_extend' [/home/jin/lab5.srcs/sources_1/new/CPU.v:384]
+INFO: [Synth 8-6155] done synthesizing module 'imm_extend' (0#1) [/home/jin/lab5.srcs/sources_1/new/CPU.v:384]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [/home/jin/lab5.srcs/sources_1/new/CPU.v:396]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/jin/lab5.srcs/sources_1/new/CPU.v:408]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [/home/jin/lab5.srcs/sources_1/new/CPU.v:396]
+INFO: [Synth 8-6157] synthesizing module 'scdatamem' [/home/jin/lab5.srcs/sources_1/new/CPU.v:562]
+INFO: [Synth 8-6155] done synthesizing module 'scdatamem' (0#1) [/home/jin/lab5.srcs/sources_1/new/CPU.v:562]
+INFO: [Synth 8-6157] synthesizing module 'data_mux' [/home/jin/lab5.srcs/sources_1/new/CPU.v:586]
+INFO: [Synth 8-6155] done synthesizing module 'data_mux' (0#1) [/home/jin/lab5.srcs/sources_1/new/CPU.v:586]
+INFO: [Synth 8-6155] done synthesizing module 'CPU' (0#1) [/home/jin/lab5.srcs/sources_1/new/CPU.v:23]
+WARNING: [Synth 8-85] always block has no event control specified [/home/jin/lab5.srcs/sources_1/new/cpu_tb.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_tb' (0#1) [/home/jin/lab5.srcs/sources_1/new/cpu_tb.v:24]
+WARNING: [Synth 8-7129] Port addr[31] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[30] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[29] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[28] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[27] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[26] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[25] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[24] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[23] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[22] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[21] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[20] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[19] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[18] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[17] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[16] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[15] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[14] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[13] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[12] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[11] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[10] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[9] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[8] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[7] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module scdatamem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[31] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[30] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[29] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[28] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[27] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[26] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[25] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[24] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[23] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[22] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[21] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[20] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[19] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[18] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[17] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[16] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[15] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[14] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[13] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[12] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[11] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[10] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[9] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[8] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[7] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[6] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[5] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[4] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[3] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[2] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[1] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[0] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[31] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[30] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[29] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[28] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[27] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[26] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[25] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[24] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[23] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[22] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[21] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[20] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[19] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[18] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[17] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[16] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[15] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[14] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[13] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[12] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[11] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[10] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[9] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[8] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[7] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[1] in module inst_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pc[0] in module inst_mem is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2016.609 ; gain = 443.707 ; free physical = 458 ; free virtual = 3801
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1356.248; parent = 1150.680; children = 205.568
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3045.062; parent = 2016.613; children = 1028.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2031.453 ; gain = 458.551 ; free physical = 458 ; free virtual = 3801
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1356.248; parent = 1150.680; children = 205.568
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3059.906; parent = 2031.457; children = 1028.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2031.453 ; gain = 458.551 ; free physical = 458 ; free virtual = 3801
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1356.248; parent = 1150.680; children = 205.568
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3059.906; parent = 2031.457; children = 1028.449
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2031.453 ; gain = 0.000 ; free physical = 453 ; free virtual = 3795
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/jin/lab5.srcs/constrs_1/new/final.xdc]
+WARNING: [Vivado 12-584] No ports matched 'aluout[31]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:1]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:1]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[30]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:2]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:2]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[29]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[28]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[27]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[26]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:6]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[25]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[24]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[23]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[22]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[21]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:11]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[20]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[19]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[18]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[17]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[16]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[15]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[14]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[13]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[12]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[11]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[10]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[9]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[8]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[7]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[6]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[5]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[4]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[3]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[2]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[1]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'aluout[0]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[31]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[30]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[29]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[28]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[27]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[26]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[25]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[24]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[23]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[22]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[21]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[20]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[19]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[18]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[17]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[16]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[15]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[14]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[13]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[12]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[11]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[10]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[9]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[8]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[7]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[6]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[5]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[4]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[3]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[2]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[1]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'inst[0]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[31]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[30]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[29]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[28]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[27]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[26]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[25]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[24]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[23]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[22]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[21]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[20]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[19]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[18]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[17]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[16]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[15]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[14]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[13]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[12]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[11]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[10]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[9]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[8]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[7]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[6]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[5]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[4]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[3]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[2]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[1]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'memout[0]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pc[31]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pc[30]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pc[29]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pc[28]'. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:100]
+INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:100]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/jin/lab5.srcs/constrs_1/new/final.xdc:100]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/jin/lab5.srcs/constrs_1/new/final.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2186.203 ; gain = 0.000 ; free physical = 375 ; free virtual = 3719
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2186.203 ; gain = 0.000 ; free physical = 375 ; free virtual = 3719
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2186.203 ; gain = 613.301 ; free physical = 434 ; free virtual = 3777
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1356.248; parent = 1150.680; children = 205.568
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3182.641; parent = 2154.191; children = 1028.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2186.203 ; gain = 613.301 ; free physical = 434 ; free virtual = 3777
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1356.248; parent = 1150.680; children = 205.568
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3182.641; parent = 2154.191; children = 1028.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2186.203 ; gain = 613.301 ; free physical = 434 ; free virtual = 3777
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1356.248; parent = 1150.680; children = 205.568
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3182.641; parent = 2154.191; children = 1028.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2186.203 ; gain = 613.301 ; free physical = 432 ; free virtual = 3776
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1356.248; parent = 1150.680; children = 205.568
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3182.641; parent = 2154.191; children = 1028.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2186.203 ; gain = 613.301 ; free physical = 432 ; free virtual = 3776
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1356.248; parent = 1150.680; children = 205.568
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3182.641; parent = 2154.191; children = 1028.449
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'pcsrc_reg' [/home/jin/lab5.srcs/sources_1/new/CPU.v:160]
+WARNING: [Synth 8-327] inferring latch for variable 'aluc_reg' [/home/jin/lab5.srcs/sources_1/new/CPU.v:161]
+WARNING: [Synth 8-327] inferring latch for variable 'shift_reg' [/home/jin/lab5.srcs/sources_1/new/CPU.v:163]
+WARNING: [Synth 8-327] inferring latch for variable 'wreg_reg' [/home/jin/lab5.srcs/sources_1/new/CPU.v:162]
+WARNING: [Synth 8-327] inferring latch for variable 'aluimm_reg' [/home/jin/lab5.srcs/sources_1/new/CPU.v:152]
+WARNING: [Synth 8-327] inferring latch for variable 'wmem_reg' [/home/jin/lab5.srcs/sources_1/new/CPU.v:153]
+WARNING: [Synth 8-327] inferring latch for variable 'm2reg_reg' [/home/jin/lab5.srcs/sources_1/new/CPU.v:154]
+WARNING: [Synth 8-327] inferring latch for variable 'jal_e_reg' [/home/jin/lab5.srcs/sources_1/new/CPU.v:156]
+WARNING: [Synth 8-327] inferring latch for variable 'r_reg' [/home/jin/lab5.srcs/sources_1/new/CPU.v:411]
+WARNING: [Synth 8-327] inferring latch for variable 'zero_reg' [/home/jin/lab5.srcs/sources_1/new/CPU.v:412]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2186.203 ; gain = 613.301 ; free physical = 424 ; free virtual = 3768
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1356.248; parent = 1150.680; children = 205.568
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3182.641; parent = 2154.191; children = 1028.449
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : synth_design options have changed between reference and incremental
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   32 Bit       Adders := 2     
+	   2 Input   32 Bit       Adders := 3     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 34    
++---Muxes : 
+	   4 Input   32 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 1     
+	   8 Input    4 Bit        Muxes := 1     
+	  13 Input    4 Bit        Muxes := 1     
+	   9 Input    3 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 2     
+	   9 Input    1 Bit        Muxes := 3     
+	  13 Input    1 Bit        Muxes := 7     
+	   2 Input    1 Bit        Muxes := 34    
+	   8 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port jal_save[31] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[30] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[29] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[28] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[27] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[26] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[25] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[24] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[23] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[22] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[21] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[20] in module regfile is either unconnected or has no load
+WARNING: [Synth 8-7129] Port jal_save[19] in module regfile is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (cpu/cu/pcsrc_reg[1]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/cu/pcsrc_reg[0]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/cu/aluc_reg[3]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/cu/aluc_reg[2]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/cu/aluc_reg[1]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/cu/aluc_reg[0]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/cu/shift_reg) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/cu/wreg_reg) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/cu/aluimm_reg) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/cu/wmem_reg) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/cu/m2reg_reg) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/cu/jal_e_reg) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[31]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[30]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[29]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[28]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[27]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[26]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[25]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[24]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[23]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[22]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[21]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[20]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[19]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[18]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[17]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[16]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[15]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[14]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[13]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[12]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[11]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[10]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[9]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[8]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[7]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[6]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[5]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[4]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[3]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[2]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[1]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/r_reg[0]) is unused and will be removed from module cpu_tb.
+WARNING: [Synth 8-3332] Sequential element (cpu/alu/zero_reg) is unused and will be removed from module cpu_tb.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 2186.203 ; gain = 613.301 ; free physical = 421 ; free virtual = 3770
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1356.248; parent = 1150.680; children = 205.568
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3182.641; parent = 2154.191; children = 1028.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|inst_mem    | RAM        | 32x30         | LUT            | 
+|cpu_tb      | p_0_out    | 32x30         | LUT            | 
++------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 2186.203 ; gain = 613.301 ; free physical = 304 ; free virtual = 3653
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1436.646; parent = 1231.128; children = 205.568
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3182.641; parent = 2154.191; children = 1028.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 2186.203 ; gain = 613.301 ; free physical = 304 ; free virtual = 3653
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1436.782; parent = 1231.265; children = 205.568
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3182.641; parent = 2154.191; children = 1028.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 2186.203 ; gain = 613.301 ; free physical = 302 ; free virtual = 3651
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1437.087; parent = 1231.569; children = 205.568
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3182.641; parent = 2154.191; children = 1028.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2186.203 ; gain = 613.301 ; free physical = 302 ; free virtual = 3651
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1437.259; parent = 1231.741; children = 205.568
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3182.641; parent = 2154.191; children = 1028.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2186.203 ; gain = 613.301 ; free physical = 302 ; free virtual = 3651
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1437.274; parent = 1231.757; children = 205.568
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3182.641; parent = 2154.191; children = 1028.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2186.203 ; gain = 613.301 ; free physical = 302 ; free virtual = 3651
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1437.290; parent = 1231.772; children = 205.568
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3182.641; parent = 2154.191; children = 1028.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2186.203 ; gain = 613.301 ; free physical = 302 ; free virtual = 3651
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1437.353; parent = 1231.835; children = 205.568
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3182.641; parent = 2154.191; children = 1028.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2186.203 ; gain = 613.301 ; free physical = 302 ; free virtual = 3651
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1437.353; parent = 1231.835; children = 205.568
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3182.641; parent = 2154.191; children = 1028.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2186.203 ; gain = 613.301 ; free physical = 302 ; free virtual = 3651
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1437.368; parent = 1231.851; children = 205.568
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3182.641; parent = 2154.191; children = 1028.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2186.203 ; gain = 613.301 ; free physical = 302 ; free virtual = 3651
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1437.399; parent = 1231.882; children = 205.568
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3182.641; parent = 2154.191; children = 1028.449
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 88 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 2186.203 ; gain = 458.551 ; free physical = 354 ; free virtual = 3703
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2186.203 ; gain = 613.301 ; free physical = 354 ; free virtual = 3703
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2186.203 ; gain = 0.000 ; free physical = 347 ; free virtual = 3696
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2186.203 ; gain = 0.000 ; free physical = 402 ; free virtual = 3751
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 6b957980
+INFO: [Common 17-83] Releasing license: Synthesis
+61 Infos, 258 Warnings, 112 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 2186.203 ; gain = 915.637 ; free physical = 614 ; free virtual = 3963
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint '/home/jin/lab5.runs/synth_1/cpu_tb.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file cpu_tb_utilization_synth.rpt -pb cpu_tb_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue May  2 03:28:55 2023...

@@ -1,0 +1,7 @@
+0.7
+2020.2
+Oct 14 2022
+05:07:14
+/home/jin/lab5.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
+/home/jin/lab5.srcs/sources_1/new/CPU.v,1683010674,verilog,,/home/jin/lab5.srcs/sources_1/new/cpu_tb.v,,ALU;CPU;control_unit;data_mux;imm_extend;inst_mem;mux_imm;mux_rf;mux_sa;pc_select;regfile;scdatamem,,,,,,,,
+/home/jin/lab5.srcs/sources_1/new/cpu_tb.v,1682917117,verilog,,,/home/jin/lab5.srcs/sources_1/new/CPU.v,cpu_tb,,,,,,,,

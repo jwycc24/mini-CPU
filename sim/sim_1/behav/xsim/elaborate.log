@@ -1,0 +1,26 @@
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot cpu_tb_behav xil_defaultlib.cpu_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3705] select index 0 into 'register' is out of bounds [/home/jin/lab5.srcs/sources_1/new/CPU.v:490]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.pc_select
+Compiling module xil_defaultlib.inst_mem
+Compiling module xil_defaultlib.control_unit
+Compiling module xil_defaultlib.mux_rf
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.mux_sa
+Compiling module xil_defaultlib.mux_imm
+Compiling module xil_defaultlib.imm_extend
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.scdatamem
+Compiling module xil_defaultlib.data_mux
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.cpu_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cpu_tb_behav
